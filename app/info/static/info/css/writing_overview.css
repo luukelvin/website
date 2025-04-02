@@ -1,0 +1,26 @@
+.writing-entry {
+    margin: 16px 0 16px 1vw;
+}
+
+#writing-list ol {
+    padding: 0 0 0 40px;
+}
+
+#writing-list h4 {
+    margin: 0 0 0 -20px;
+}
+
+.writing-brief {
+    margin: 0;
+}
+
+.writing-desc {
+    margin: 8px 0 0 0;
+    padding: 0 0 0 1vw;
+}
+
+@media (max-width:700px) {
+    .writing-desc {
+        padding: 0;
+    }
+}

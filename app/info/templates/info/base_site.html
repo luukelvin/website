@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href={% static "info/css/base.css" %}/>
+    {% block extrahead %}{% endblock %}
+  </head>
+
+  <body>
+    <div id="container">
+      <header id="header">
+        <div id="nav">
+          <a href={% url "info:home" %} class="nav-link">Home</a>
+          <a href={% url "info:writing" %} class="nav-link">Writing</a>
+          <a href="https://github.com/luukelvin">Github</a>
+        </div>
+      </header>
+
+      <div id="content">
+        {% block body %}{% endblock %}
+      </div>
+
+      <footer id="footer">
+          {% block footer %}{% endblock %}
+      </footer>
+    </div>
+
+  </body>
+
+
+</html>

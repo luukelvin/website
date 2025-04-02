@@ -1,0 +1,6 @@
+# Django
+media
+db.sqlite3
+
+# Config
+.env

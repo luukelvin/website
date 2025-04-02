@@ -1,0 +1,34 @@
+{% extends "info/base_site.html" %}
+{% load static %}
+
+{% block title %} My writing {% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href={% static "info/css/writing_overview.css" %}/>
+{% endblock %}
+
+{% block body %}
+<div id="writing-list">
+    <h2> A collection of things I've written (or helped write). </h2>
+
+    <ol>
+    {% for category, writings in writing_by_category.items %}
+    <div class="writing-list-category" id="writing-list-{{ category.label|lower }}">
+    <h4> {{ category.value }} </h4>
+    {% for writing in writings %}
+    <li>
+    <div class="writing-entry">
+        <p class="writing-brief">{% if writing.url %}<a href={{writing.url}}><em>{{writing.title}}</em></a>{% else %}<em>{{writing.title}}</em>{% endif %}. {{writing.date_published|date:"M. Y"}}. {% if writing.coauthor %} Written with my coauthors {{writing.coauthor}}. {% endif %}</p>
+        <p class="writing-desc">{{ writing.description|safe }}</p>
+    </div>
+    </li>
+    {% endfor %}
+    </div>
+
+    {% endfor %} 
+    </ol>
+
+
+</div>
+
+{% endblock %}

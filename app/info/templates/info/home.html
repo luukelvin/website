@@ -1,0 +1,27 @@
+{% extends "info/base_site.html" %}
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href={% static "info/css/home.css" %}/>
+{% endblock %}
+
+{% block body %}
+
+<div id="name">
+    <h1> {{ about.name }} </h1>
+</div>
+
+<div id="about">
+  <p> {{ about.about_text|safe }} </p>
+  <br>
+  <p> You can find a copy of my resume <a href= {{ about.resume.url }}>here</a> (updated {{about.resume_update|date:"M. j, Y" }}).</p>
+  <br>
+  <p> {{ about.link_text|safe }} </p>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<p><b>Contact:</b> luukelvin [at] g [dot] ucla [dot] edu </p>
+<p> Last updated: {{about.last_modified|date:"M. j, Y"}}</p>
+{% endblock %}
