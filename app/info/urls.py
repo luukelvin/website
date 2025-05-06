@@ -1,9 +1,10 @@
 from django.urls import path
 
+from django_distill import distill_path
 from info import views
 
 app_name = "info"
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('writing', views.writing_overview, name='writing'),
+    distill_path('', views.home, name='home', distill_file='index.html'),
+    distill_path('writing', views.writing_overview, name='writing'),
 ]
