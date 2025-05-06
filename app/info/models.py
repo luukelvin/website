@@ -5,6 +5,10 @@ class About(models.Model):
     name = models.CharField(max_length=1000)
     about_text = models.TextField()
     link_text = models.TextField(blank=True)
+    notes = models.TextField(
+        blank=True,
+        help_text="The text in this field will not be displayed. Use for notes."
+    )
     resume = models.FileField(upload_to='resume', blank=True)
     resume_update = models.DateField(null=True)
     last_modified = models.DateTimeField(auto_now=True)
