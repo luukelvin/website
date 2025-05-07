@@ -1,8 +1,9 @@
 {% extends "info/base_site.html" %}
 {% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 {% block extrahead %}
-<link rel="stylesheet" href={% static "info/css/home.css" %}/>
+<link rel="stylesheet" href="{{ STATIC_PREFIX }}info/css/home.css"/>
 {% endblock %}
 
 {% block body %}

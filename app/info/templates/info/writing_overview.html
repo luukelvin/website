@@ -1,10 +1,11 @@
 {% extends "info/base_site.html" %}
 {% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 {% block title %} My writing {% endblock %}
 
 {% block extrahead %}
-<link rel="stylesheet" href={% static "info/css/writing_overview.css" %}/>
+<link rel="stylesheet" href="{{ STATIC_PREFIX }}info/css/writing_overview.css"/>
 {% endblock %}
 
 {% block body %}

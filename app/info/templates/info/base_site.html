@@ -1,10 +1,11 @@
 {% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="stylesheet" href={% static "info/css/base.css" %}/>
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}info/css/base.css" />
     {% block extrahead %}{% endblock %}
   </head>
 
