@@ -1,6 +1,6 @@
 # Website
 
-Source for my personal website <luukelvin.github.io>. 
+Source for my personal website [luukelvin.github.io](https://luukelvin.github.io).
 
 ## Setup
 
@@ -33,7 +33,7 @@ All of the files for a static site can be generated using django-distill. Run
 python3 manage.py distill-local --collectstatic target_directory
 ```
 where `target_directory` is the path to the directory you want the files to go to,
-or just use run the `make` script in the `pipenv shell`:
+or just run the `make` script in the `pipenv shell`:
 ```
 . make.sh
 ```
