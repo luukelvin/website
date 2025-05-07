@@ -1,6 +1,6 @@
 # Website
 
-Source for my personal website [I haven't hosted this anywhere yet. Pretend there is a link please.].
+Source for my personal website <luukelvin.github.io>. 
 
 ## Setup
 
@@ -18,6 +18,7 @@ Create a `.env` file in the project directory with the following vars:
 
 - `SECRET_KEY`: Django secret key. Generate your own.
 - `DEBUG_STATUS`: One of "True" or "False". Defaults to "True" if not set.
+- `DISTILL_DIR`: Target directory for the static site generator.
 
 ### Activating virtual env
 After doing the above two steps, launch the virtual environment shell with
@@ -31,4 +32,8 @@ All of the files for a static site can be generated using django-distill. Run
 ```
 python3 manage.py distill-local --collectstatic target_directory
 ```
-where `target_directory` is the path to the directory you want the files to go to.
+where `target_directory` is the path to the directory you want the files to go to,
+or just use run the `make` script in the `pipenv shell`:
+```
+. make.sh
+```
