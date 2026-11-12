@@ -23,6 +23,6 @@
 {% endblock %}
 
 {% block footer %}
-<p><b>Contact:</b> luukelvin [at] g [dot] ucla [dot] edu </p>
-<p> Last updated: {{about.last_modified|date:"M. j, Y"}}</p>
+<p><b>Contact:</b> {{ about.contact|safe }} </p>
+<p> Last updated: {{ about.last_modified|date:"M. j, Y" }}</p>
 {% endblock %}

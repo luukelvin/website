@@ -11,6 +11,7 @@ class About(models.Model):
     )
     resume = models.FileField(upload_to='resume', blank=True)
     resume_update = models.DateField(null=True)
+    contact = models.CharField(max_length=1000, null=True)
     last_modified = models.DateTimeField(auto_now=True)
 
 class Writing(models.Model):
