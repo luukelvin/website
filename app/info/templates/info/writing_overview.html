@@ -19,8 +19,11 @@
     {% for writing in writings %}
     <li>
     <div class="writing-entry">
-        <p class="writing-brief">{% if writing.url %}<a href={{writing.url}}><em>{{writing.title}}</em></a>{% else %}<em>{{writing.title}}</em>{% endif %}. {{writing.date_published|date:"M. Y"}}. {% if writing.coauthor %} Written with my coauthors {{writing.coauthor}}. {% endif %}</p>
-        <p class="writing-desc">{{ writing.description|safe }}</p>
+      <p class="writing-brief">{% if writing.url %}<a href={{writing.url}}><em>{{writing.title}}</em></a>{% else %}<em>{{writing.title}}</em>{% endif %}. {{writing.date_published|date:"M Y"}}. </p>
+        <ul class="writing-desc">
+            {% if writing.author %} <li> {{writing.author}}. </li> {% endif %}
+            {% if writing.description %} <li>{{ writing.description|safe }}</li> {% endif %}
+        </ul>
     </div>
     </li>
     {% endfor %}

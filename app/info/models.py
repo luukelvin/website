@@ -16,10 +16,11 @@ class About(models.Model):
 
 class Writing(models.Model):
     class Category(models.TextChoices):
-        MATH = "Math"
-        DAL = "Digital Archaeology Lab (DAL)"
+        PUB = "Publications"
+        MAN = "Manuscripts"
+        OTH = "Other"
     title = models.CharField(max_length=1000)
-    coauthor = models.CharField(max_length=1000, blank=True)
+    author = models.CharField(max_length=1000, blank=True)
     description = models.TextField(blank=True)
     category = models.CharField(choices=Category, max_length=1000)
     link = models.URLField(max_length=1000, blank=True)
