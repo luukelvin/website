@@ -15,7 +15,7 @@
 <div id="about">
   <p> {{ about.about_text|safe }} </p>
   <br>
-  <p> You can find a copy of my resume <a href= {{ about.resume.url }}>here</a> (updated {{about.resume_update|date:"M. j, Y" }}).</p>
+  <p> <a href= {{ about.resume.url }}>My resume/CV</a> (updated {{about.resume_update|date:"M j, Y" }}).</p>
   <br>
   <p> {{ about.link_text|safe }} </p>
 </div>
@@ -24,5 +24,5 @@
 
 {% block footer %}
 <p><b>Contact:</b> {{ about.contact|safe }} </p>
-<p> Last updated: {{ about.last_modified|date:"M. j, Y" }}</p>
+<p> Last updated: {{ about.last_modified|date:"M j, Y" }}</p>
 {% endblock %}
